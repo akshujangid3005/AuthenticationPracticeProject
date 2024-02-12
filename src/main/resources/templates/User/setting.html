@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html lang="en"  xmlns:th ="http://www.thymeleaf.org" th:replace="User/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<section>
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <!--This is email form-->
+                        <h3 class="my-3">Update Password </h3>
+                        <form th:action="@{/auth/user/change-password}" method="post">
+                            <div class="form-group">
+                                <input name="oldpassword" required="required" type="password" placeholder="Enter here your current password" class="form-control my-3">
+								<input name="newpassword" required="required" type="password" placeholder="Enter here your new password" class="form-control">		
+                                <div class="container text-left" >
+                                    <button  class="btn btn-warning my-3">Update</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
